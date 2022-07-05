@@ -1,3 +1,17 @@
+<div *ngIf="loading" class="alert alert-info text-center" role="alert">
+  <h4 class="alert-heading">Cargando...</h4>
+  <p>
+    <i class="fa fa-sync fa-spin sa-2x"></i>
+  </p>
+</div>
+
+
+<div *ngIf="error" class="alert alert-danger text-center" role="alert">
+  <h4 class="alert-heading">Error</h4>
+  <pre>
+    {{error | json}}
+  </pre>
+</div>
 <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col" *ngFor="let u of usuarios">
       <div class="card" >
